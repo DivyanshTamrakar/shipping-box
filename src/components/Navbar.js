@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-600 p-4 text-white">
       <div className="container mx-auto flex justify-between">
-        <Link href="/add-box" className="text-lg font-bold">
+        <Link href="/" className="text-lg font-bold">
           Shipping Calculator
         </Link>
         <div>
