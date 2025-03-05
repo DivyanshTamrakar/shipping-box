@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { saveBox } from "@/lib/storage";
 
 const Form = () => {
   const [receiver, setReceiver] = useState("");
