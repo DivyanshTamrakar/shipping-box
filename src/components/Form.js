@@ -1,13 +1,15 @@
 "use client";
 import { useState } from "react";
 import { saveBox } from "@/lib/storage";
+import { useRouter } from "next/navigation";
 
 const Form = () => {
   const [receiver, setReceiver] = useState("");
   const [weight, setWeight] = useState("");
-  const [color, setColor] = useState("#ffffff");
+  const [color, setColor] = useState("#666");
   const [destination, setDestination] = useState("Sweden");
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const multipliers = {
     Sweden: process.env.NEXT_PUBLIC_SWEDEN_MULTIPLIER || 7.35,
@@ -52,6 +54,7 @@ const Form = () => {
     setColor("#ffffff");
     setDestination("Sweden");
     setError("");
+    router.push("/list");
   };
 
   return (
@@ -75,13 +78,13 @@ const Form = () => {
           className="w-full p-2 border rounded"
         />
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 ">
           <label>Box Color:</label>
           <input
             type="color"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            className="w-10 h-10 border rounded"
+            className="w-10 h-10"
           />
         </div>
 

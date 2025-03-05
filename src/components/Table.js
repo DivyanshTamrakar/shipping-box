@@ -31,7 +31,7 @@ const Table = () => {
                   <td className="p-2">{box.weight}</td>
                   <td className="p-2">
                     <div
-                      className="w-6 h-6 rounded"
+                      className="w-6 h-6 rounded border-1"
                       style={{ backgroundColor: box.color }}
                     ></div>
                   </td>
