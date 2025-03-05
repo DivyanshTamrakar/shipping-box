@@ -8,7 +8,7 @@ const Navbar = () => {
           Shipping Calculator
         </Link>
         <div>
-          <Link href="/add-box" className="px-4">
+          <Link href="/" className="px-4">
             Add Box
           </Link>
           <Link href="/list" className="px-4">
